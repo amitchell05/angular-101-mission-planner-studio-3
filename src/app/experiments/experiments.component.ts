@@ -14,7 +14,24 @@ export class ExperimentsComponent implements OnInit {
     'Satellite launch',
   ];
 
+  chosenExperiments: string[] = [];
+
   constructor() {}
 
   ngOnInit() {}
+
+  addExperiment(item: string) {
+    if (
+      !this.chosenExperiments.includes(item) &&
+      this.chosenExperiments.length < 3
+    ) {
+      console.log('Something happened?', item);
+      this.chosenExperiments.push(item);
+    }
+  }
+
+  removeExperiment(item: string) {
+    let index = this.chosenExperiments.indexOf(item);
+    this.chosenExperiments.splice(index, 1);
+  }
 }

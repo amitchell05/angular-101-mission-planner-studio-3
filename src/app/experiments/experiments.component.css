@@ -6,3 +6,11 @@
 h3 {
   text-align: center;
 }
+
+.clickable {
+  cursor: pointer;
+}
+
+.selected {
+  color: turquoise;
+}
